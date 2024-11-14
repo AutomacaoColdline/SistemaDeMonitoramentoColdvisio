@@ -188,6 +188,7 @@ IF CTRL_MDB.RD_EV THEN
        PUB_WAPP.BASE[ID_CTRL].STS_DEGELO  := 0;
        PUB_WAPP.BASE[ID_CTRL].STS_DESUMID := 0;
        PUB_WAPP.BASE[ID_CTRL].STS_PHP     := 0;
+       STS_PHP[ID_CTRL] := FALSE;
        PUB_WAPP.BASE[ID_CTRL].STS_ON_OFF  := 0;
        PUB_WAPP.BASE[ID_CTRL].ALM         := 0;
        PUB_WAPP.BASE[ID_CTRL].SP_TA       := 0.0;
@@ -231,6 +232,7 @@ IF CTRL_MDB.RD_EV THEN
                       DEMUX_STS_DIXELL_PHP   := DEMUX16(UINT_TO_WORD(STATUS_UINT_DIXELL_PHP),STATUS_VET_DIXELL_PHP);
                       // ATRIBUI VALORES RECEBIDOS DO CANAL DE MAPEAMENTO PARA A BASE DE EXPORTAÇÃO
                       PUB_WAPP.BASE[ID_CTRL].STS_PHP     := BOOL_TO_INT(STATUS_VET_DIXELL_PHP[12]);
+                      STS_PHP[ID_CTRL] := STATUS_VET_DIXELL_PHP[12];
 	            //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 	            // LEITURA DO STATUS DE ON / OFF
 	            ELSIF (CTRL_MDB.RD_ID = 5) then
@@ -355,6 +357,7 @@ IF CTRL_MDB.RD_EV THEN
           PUB_WAPP.BASE[ID_CTRL].STS_DEGELO  := 0;
           PUB_WAPP.BASE[ID_CTRL].STS_DESUMID := 0;
           PUB_WAPP.BASE[ID_CTRL].STS_PHP     := 0;
+          STS_PHP[ID_CTRL] := FALSE;
           PUB_WAPP.BASE[ID_CTRL].STS_ON_OFF  := 0;
           PUB_WAPP.BASE[ID_CTRL].ALM         := 0;
           PUB_WAPP.BASE[ID_CTRL].SP_TA       := 0.0;

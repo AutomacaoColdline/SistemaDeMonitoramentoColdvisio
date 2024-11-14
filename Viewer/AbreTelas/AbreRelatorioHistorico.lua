@@ -17,6 +17,7 @@ local scr  = Sender.Screen
 --Obtém os tags locais
 local string_historico   = Tags.Get("Kernel.Tags.Local.TagLocalGroup_KN_relatorio.TagLocal_StringHistorico")
 local valor_combo        = Tags.Get("Kernel.Tags.Local.TagLocalGroup_KN_relatorio.TagLocal_SelecaoControlador")
+local tempo_de_amostragem = Tags.Get("Kernel.Tags.Local.TagLocalGroup_KN_relatorio.TagLocal_SelecaoTempoAmostragem")
 
 local tag_inicio = Tags.Get("Kernel.Tags.Local.TagLocalGroup_KN_relatorio.TagLocal_Inicial")
 local tag_final  = Tags.Get("Kernel.Tags.Local.TagLocalGroup_KN_relatorio.TagLocal_Final")
@@ -31,6 +32,12 @@ local clp_conectado = Tags.Get("Kernel.Tags.Local.TagLocalGroup_KN_Conexao.TagLo
 
 --Obtém o texto do combobox
 local texto_combo = scr.ComboBox_Controladores.Text
+
+
+
+local novotexto_combo = Tags.Get("Kernel.Tags.Local.TagLocalGroup_KN_relatorio.TagLocal_CheckBox_Controlador1")
+local novotexto_combo1 = Tags.Get("Kernel.Tags.Local.TagLocalGroup_KN_Instancias.Nome_controlador_1")
+
 
 
 --Verifica se foi selecioanda um controlador.
